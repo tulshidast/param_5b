@@ -43,7 +43,7 @@ public class VerifyOmayoBlogHomePage {
 		// Make sure Image is displayed at left upper side.
 		assertTrue(homePage.getCollegeImege().isDisplayed());
 
-		// Verify table contents.
+		// Verify table contents for user table.
 		List<String> expectedTableData = new ArrayList<String>();
 		expectedTableData = Arrays.asList("Kishore", "22", "Delhi", "Manish", "25", "Pune", "Praveen", "29",
 				"Bangalore", "Dheepthi", "31", "Mumbai");
