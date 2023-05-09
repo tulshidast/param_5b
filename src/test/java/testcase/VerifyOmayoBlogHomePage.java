@@ -48,12 +48,14 @@ public class VerifyOmayoBlogHomePage {
 		expectedTableData = Arrays.asList("Kishore", "22", "Delhi", "Manish", "25", "Pune", "Praveen", "29",
 				"Bangalore", "Dheepthi", "31", "Mumbai");
 		assertTrue(homePage.getTableData().equals(expectedTableData));
-
 	}
 
 	@AfterMethod(alwaysRun = true)
 	public void tearDown(ITestResult result) throws IOException {
 		if (result.getStatus() == ITestResult.FAILURE) {
+			Utility.getScreenshot(driver, result.getName());
+		}
+		if (result.getStatus() == ITestResult.SUCCESS) {
 			Utility.getScreenshot(driver, result.getName());
 		}
 		driver.quit();
