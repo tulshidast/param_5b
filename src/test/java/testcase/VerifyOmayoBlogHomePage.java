@@ -55,9 +55,6 @@ public class VerifyOmayoBlogHomePage {
 		if (result.getStatus() == ITestResult.FAILURE) {
 			Utility.getScreenshot(driver, result.getName());
 		}
-		if (result.getStatus() == ITestResult.SUCCESS) {
-			Utility.getScreenshot(driver, result.getName());
-		}
 		driver.quit();
 	}
 }
